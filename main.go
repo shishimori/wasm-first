@@ -4,7 +4,7 @@ package main
 
 import "syscall/js"
 
-// js.Valueに依存しない型だけで実装（Goのコードだけでテストがしやすくなる）
+// js.Valueに依存しない型だけで実装（別ファイルに切り出せば、Wasm環境なしでもテストできる）
 func add(args ...int) int {
 	sum := 0
 	for _, arg := range args {
